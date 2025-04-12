@@ -1,0 +1,6 @@
+fastapi==0.95.2
+uvicorn==0.22.0
+mistralai==1.0.0  # Remplacez par la version correcte si connue
+pydantic==1.10.7  # Utilisé pour les modèles de requêtes dans FastAPI
+accelerate==1.6.0  # Utilisé pour l'accélération des modèles
+transformers  # Bibliothèque pour les modèles de traitement du langage naturel
