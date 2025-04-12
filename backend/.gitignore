@@ -4,7 +4,7 @@
 *.pyd
 __pycache__/
 *.sqlite3
-
+CONFIG.txt
 # Virtual environments
 .venv/
 env/

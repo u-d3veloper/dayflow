@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Request, Depends
+from fastapi.middleware.cors import CORSMiddleware
 
 import Models
 import Client
@@ -7,6 +8,17 @@ import os
 
 # Configurations initiales
 app = FastAPI()
+origins = [
+    '*'
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/organize")
 def organize(data: Models.OrganizeRequest):

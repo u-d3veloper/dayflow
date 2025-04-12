@@ -11,6 +11,7 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
+// app is an express app, do what you usually do with express
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>

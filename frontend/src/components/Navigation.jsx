@@ -6,6 +6,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import AssistantIcon from '@mui/icons-material/Assistant';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { useLocation, useNavigate } from "react-router-dom";
+import { colors } from '@mui/material';
 
 export default function Navigation() {
     const location = useLocation();
@@ -46,16 +47,25 @@ export default function Navigation() {
     };
 
     return (
-        <Box sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+        <Box sx={{ position: 'fixed', bottom: 0, left: 0, right: 0}} elevation={3}>
             <BottomNavigation
-                showLabels
                 value={value}
                 onChange={handleChange}
+                sx={{
+                    height: "70px",
+                    borderTop: "1px solid #EFEFEF",
+                    backgroundColor:"#FFF",
+                    borderRadius:'30px 30px 0 0'
+                }}
             >
-                <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-                <BottomNavigationAction label="Use" icon={<AssistantIcon />} />
-                <BottomNavigationAction label="Organize" icon={<SettingsIcon />} />
+                <BottomNavigationAction icon={<HomeIcon sx={ActionStyle}/>} />
+                <BottomNavigationAction icon={<AssistantIcon sx={ActionStyle}/>} />
+                <BottomNavigationAction icon={<SettingsIcon sx={ActionStyle}/>} />
             </BottomNavigation>
         </Box>
     );
+}
+
+const ActionStyle = {
+    fontSize:"30px"
 }
